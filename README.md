@@ -3,7 +3,19 @@
 <br>
 ## Steps taken for the analysis
 <br><br>
- 1.Removed the columns in loan.csv which were having NULL for all rows<br><br>
+ 1.Removed the columns in loan.csv which were having NULL for all rows starting from column name 'annual_inc_joint'<br><br>
+ 2.Removed columns which could not add a pointer for analysis OR  all rows had same values in these columns:
+ -ID
+ -Member-Id
+ -emp_title 
+ -url
+ -zip_code
+ -mths_since_major_derog
+ -application_type
+3. Removed employment tenure having values N/A
+and removed '+' , '<' characters from this column, to consider it as number type 
+
+ 
  2.Renamed a few columns for purpose of understanding while querying<br><br>
   term --> term_in_months<br>
   emp_tenure --> employment_tenure_of_borrower_years<br>
