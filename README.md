@@ -3,24 +3,30 @@
 <br>
 ## Steps taken for the analysis
 <br><br>
- 1.Removed the columns in loan.csv which were having NULL for all rows starting from column name 'annual_inc_joint'<br><br>
- 2.Removed columns which could not add a pointer for analysis OR  all rows had same values in these columns:
- -ID
- -Member-Id
- -emp_title 
- -url
- -zip_code
- -mths_since_major_derog
- -application_type
-3. Removed employment tenure having values N/A
-and removed '+' , '<' characters from this column, to consider it as number type 
-
- 
- 2.Renamed a few columns for purpose of understanding while querying<br><br>
-  term --> term_in_months<br>
-  emp_tenure --> employment_tenure_of_borrower_years<br>
- 3.Removed outliers using Interquartile Range method<br><br>
- 4. Plotted graphs between the below variables for understanding their relation:<br>
+ 1. Loaded the data into a datafram from the csv file
+ <br>
+ 2.Printed the top 5 rows from the dataframe and the column data types to understand the data<br>
+ Also get the summary statistics
+ <br>
+ 3.Identified and dropped columns which are row identifiers or description text or columns which have  Null or NAN or same value for all rows 
+ <br>
+ 4. Based on the data description identified some columns having mixed data types . So print them to analyze further
+ <br>
+ 5. Create two new columns to store the converted value for below columns to keep data in consistent data type:<br>
+ int_rate_numeric: Removed % symbol from int_rate<br>
+ empl_length_numeric : Removed the words year and symbols < and > and + from emp_length<br>
+ <br>
+ 6.Identify and handle outliers using IQR for required columns. Here we are considering the below columns<br>
+ - loan_amnt<br>
+ - annual_inc<br>
+ - dti<br>
+ - revol_bal<br>
+ - total_acc<br>
+  <br>
+ 7.Analyze the Patterns of Loan Defaulters by querying<br>
+ -Analyze default rates by loan grade<br>
+ -Analyze default rates by employment length<br><br>
+ 8.Plotted graphs between the below variables for understanding their relation:<br>
    (i)  Loan Status vs Loan Amount<br>
    (ii) Employment Tenure vs Loan Status<br>
    (iii)Home Ownership vs Loan Status<br>
