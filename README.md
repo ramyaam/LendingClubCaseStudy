@@ -1,40 +1,38 @@
-# LendingClubCaseStudy
-<br>
-<br>
-## Steps taken for the analysis
-<br><br>
- 1. Loaded the data into a datafram from the csv file
-<br><br>
- 2.Printed the top 5 rows from the dataframe and the column data types to understand the data<br>
- Also get the summary statistics
- <br><br>
- 3.Identified and dropped columns which are row identifiers or description text or columns which have  Null or NAN or same value for all rows 
- <br><br>
- 4. Based on the data description identified some columns having mixed data types . So print them to analyze further
- <br><br>
- 5. Create two new columns to store the converted value for below columns to keep data in consistent data type:<br>
- int_rate_numeric: Removed % symbol from int_rate<br>
- empl_length_numeric : Removed the words year and symbols < and > and + from emp_length<br>
-<br><br>
- 6.Identify and handle outliers using IQR for required columns. Here we are considering the below columns<br>
- - loan_amnt<br>
- - annual_inc<br>
- - dti<br>
- - revol_bal<br>
- - total_acc<br>
-  <br><br>
- 7.Analyze the Patterns of Loan Defaulters by querying<br>
- -Analyze default rates by loan grade<br>
- -Analyze default rates by employment length<br><br>
- 8.Plotted graphs between the below variables for understanding their relation:<br>
-   (i)  Loan Status vs Loan Amount<br>
-   (ii) Employment Tenure vs Loan Status<br>
-   (iii)Home Ownership vs Loan Status<br>
-   (iv) Annual Income vs Loan Status<br>
-   (v)  Interest Rate vs Loan Status<br>
-   (vi) Purpose vs Loan Status<br>
-   (vii)Term in months vs Loan Status<br>
-   (viii) Grade vs Loan Status<br><br>
- 9.Also tried to check the dependency between multi factors:<br>
-   (i) Loan amount vs Annual Income, and Loan Status<br>
-   (ii) Interest Rate vs Loan Purpose , grouped by Loan Status<br>
+## Analysis Steps
+
+### 1. Data Loading
+- Loaded the dataset from the CSV file into a Pandas DataFrame.
+
+### 2. Initial Data Exploration
+- Displayed the first 5 rows and examined column data types.
+- Generated summary statistics for numeric columns.
+
+### 3. Column Cleanup
+- Dropped columns that are identifiers, descriptive text, or have high missing values across rows.
+
+### 4. Handling Mixed Data Types
+- Identified columns with mixed data types and analyzed further.
+
+### 5. Data Type Conversion
+- Created `int_rate_numeric` and `empl_length_numeric` columns by standardizing data formats.
+
+### 6. Outlier Detection and Removal
+- Applied IQR method to identify and handle outliers in columns like `loan_amnt`, `annual_inc`, etc.
+
+### 7. Default Analysis
+- Investigated default rates by loan grade and employment length.
+
+### 8. Data Visualization
+- Plotted graphs to explore relationships:
+  - Loan Status vs Loan Amount
+  - Employment Tenure vs Loan Status
+  - Home Ownership vs Loan Status
+  - Annual Income vs Loan Status
+  - Interest Rate vs Loan Status
+  - Purpose vs Loan Status
+  - Term in months vs Loan Status
+  - Grade vs Loan Status
+
+### 9. Dependency Analysis
+- Explored dependencies between factors like Loan Amount vs Annual Income and Loan Status.
+- Analyzed Interest Rate vs Loan Purpose grouped by Loan Status.
