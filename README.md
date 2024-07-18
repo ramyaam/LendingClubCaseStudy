@@ -3,26 +3,11 @@
 ### 1. Data Loading
 - Loaded the dataset from the CSV file into a Pandas DataFrame.
 
-### 2. Initial Data Exploration
+### 2. Data Analysis : Initial Data Exploration
 - Displayed the first 5 rows and examined column data types.
 - Generated summary statistics for numeric columns.
-
-### 3. Column Cleanup
-- Dropped columns that are identifiers, descriptive text, or have high missing values across rows.
-
-### 4. Handling Mixed Data Types
-- Identified columns with mixed data types and analyzed further.
-
-### 5. Data Type Conversion
-- Created `int_rate_numeric` and `empl_length_numeric` columns by standardizing data formats.
-
-### 6. Outlier Detection and Removal
-- Applied IQR method to identify and handle outliers in columns like `loan_amnt`, `annual_inc`, etc.
-
-### 7. Default Analysis
-- Investigated default rates by loan grade and employment length.
-
-### 8. Data Quality Assessment
+- Described the meanings of the columns and expected value range for analysis
+#### Data Quality Assessment
 #### Numerical Columns:
 - **loan_amnt (Loan Amount):**
   - Checked for unusually high or low values.
@@ -50,8 +35,14 @@
 - **last_pymnt_month, next_pymnt_d, last_credit_pull_d:**
   - Ensured proper date formats and validity of dates.
 
-### 9. Data Visualization
-- Plotted graphs to explore relationships and dependencies between various factors and loan status.
+### 3. Data Clean up and Manipulation
+- Dropped columns that are identifiers, descriptive text, or have high missing values across rows, and columns which do not add value to the analysis like future_payment_date
+- Identified columns with mixed data types and converted them : int_rate, emp_length, revol_util
+- Identify and Remove outliers using Inter Quartile Range
+- To focus on defaulters, retain only the Charged-Off loan rows
 
-### 10. Dependency Analysis
-- Explored relationships such as Loan Amount vs Annual Income and Interest Rate vs Loan Purpose, grouped by Loan Status.
+### 4. Data Analysis : Data Visualization
+- Perform univariate analysis on key numerical and categorical columns
+- Perform bivariate and multivariate analysis by plotting graphs
+
+
