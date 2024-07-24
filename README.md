@@ -5,7 +5,8 @@
 ## Table of Contents
 * [General Info](#general-information)
 * [Tools and Technologies Used](#tools-and-technologies-used) 
-* [Conclusions](#conclusions) 
+* [Conclusions](#conclusions)
+* [Contact](#contact) 
 
 <!-- You can include any other section that is pertinent to your problem -->
 
