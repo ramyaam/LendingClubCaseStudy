@@ -4,9 +4,8 @@
 
 ## Table of Contents
 * [General Info](#general-information)
-* [Tools and Technologies Used](#tools-and-technologies-used)
-* [Conclusions](#conclusions)
-* [Acknowledgements](#acknowledgements)
+* [Tools and Technologies Used](#tools-and-technologies-used) 
+* [Conclusions](#conclusions) 
 
 <!-- You can include any other section that is pertinent to your problem -->
 
@@ -25,6 +24,14 @@
 
 - What is the dataset that is being used?
   loans history data from 2007 to 2011.
+
+## Tools and Technologies Used
+To run this project, you need to have Anaconda Jupyter Notebook and Python installed along with the following libraries:
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- warnings
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
@@ -67,18 +74,6 @@
 - Grade and Interest Rate: The strong positive correlation between grade and interest rate indicates that higher loan grades are associated with lower interest rates among defaulters.
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
-
-
-## Tools and Technologies Used
-To run this project, you need to have Anaconda Jupyter Notebook and Python installed along with the following libraries:
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- warnings
-
-<!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
-
 
 ## Contact
 Created by [[@ramyaam](https://github.com/ramyaam)] [[@rajashekar52](https://github.com/rajashekar52/)] - feel free to contact us!
